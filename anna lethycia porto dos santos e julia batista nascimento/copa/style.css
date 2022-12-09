@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --font:'Poppins', sans-serif;
+    --alpha:344;
+    --beta:34;
+    --color-alpha-1:hsl(var(--alpha), 87%, 32%);
+    --color-alpha-2:hsl(var(--alpha), 85%, 8%);
+    --color-beta-1:hsl(var(--beta), 7%, 100%);
+    --color-beta-2:hsl(var(--beta), 85%, 8%);
+    --color-beta-3:hsl(var(--beta), 7%, 100%,.2);
+
+}
+
+body{
+    margin: 0;
+    font-family: var(--font);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+header nav{
+    background: linear-gradient(40deg,var(--color-alpha-1),var(--color-alpha-2)) ;
+    color: var(--color-beta-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.75rem;
+}
+header nav .logo{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+header nav .menu{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: .75rem;
+    margin: 0;
+}
+header nav .menu li{
+    list-style: none;
+}
+header picture{
+    width: 100%;
+    height: 8rem;
+}
+header picture img{
+    width: 100%;
+    height: 8rem;
+    object-fit: contain;
+}
+
+main{
+    display: flex;
+    gap: .5rem;
+}
+main #banner{
+    position: relative;
+    box-shadow: 0 0 10px 1px var(--color-alpha-2);
+    width: 100%;
+    border-radius: 6px;
+}
+#news #emphasis{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin: 0 0 1rem 0;
+}
+#news #emphasis img{
+    box-shadow: 0 0 10px 1px var(--color-alpha-2);
+    width: 50%;
+    object-fit: contain;
+}
+#news #emphasis .info{
+    width: 50%;
+}
+
+main{
+    margin: 0 6px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+}
+.list li{
+    margin: 0;
+    background: hsl(var(--alpha), 85%, 8%);
+    color: hsl(var(--beta), 7%, 100%);
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 1rem;
+    gap: .5rem;
+    box-shadow: 0 0 10px 1px var(--color-beta-2);
+    border-radius: 6px;
+}
+.list li .text h2{
+    font-size: 1rem;
+}
+.list li .text p{
+    font-size: .7rem;
+}
+.list li img{
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 1px var(--color-beta-3);
+}
+
+
+@media only screen and (max-width: 700px) {
+    main #banner{
+        display: none;
+    }
+    #news #emphasis{
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    #news #emphasis img{
+        width: 100%;
+        object-fit: contain;
+    }
+    #news #emphasis .info{
+        width: 100%;
+    }
+    #news #emphasis .info p{
+        display: none;
+    }
+    .list li .text p{
+        display: none;
+    }
+}
